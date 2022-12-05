@@ -1,0 +1,14 @@
+memory {
+    rom(0x0000, 0x2000)
+    ram(0x2000, 0x4000)
+}
+
+sections {
+    text(rom) {
+        keep "text/vectors"
+        "test*"
+    }
+    data(ram, rom) {
+        "data*"
+    }
+}
